@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="go-back-button">
+        <div class="myButton" ng-click="$ctrl.goBack()">Back</div>
+    </div>
+
+    <div class="header-example">
+        <p>
+            <h2>Adapter Pattern Example</h2>
+        </p>
+
+        <p class="explanation">For this example, a user should select one drink in order to see the information about it. We have two types of drinks: soda and natural juices. Each type of drink is handled by implementing the adapter pattern.</p>
+    </div>
+
+    <div class="division">
+    </div>
+
+    <div class="multiple-form">
+        <select ng-model="$ctrl.drinkSelected">
+            <option ng-repeat="drink in $ctrl.drinks" value="{{$index}}">{{drink.name}}</option>
+        </select>
+
+        <div class="calculate-button-container">
+            <button class="calculate-button" ng-click="$ctrl.displayInformation()">Display Info</button>
+        </div>
+    </div>
+
+    <div class="counters">
+        <img src="{{$ctrl.image}}" width="30%">
+        <h2>
+            Information
+        </h2>
+
+        <p><strong>Ingredients: </strong>{{$ctrl.ingredients}}</p>
+        <p><strong>Amount: </strong>{{$ctrl.amount}}</p>
+    </div>
+</div>
