@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="go-back-button">
+        <div class="myButton" ng-click="$ctrl.goBack()">Back</div>
+    </div>
+
+    <div class="header-example">
+        <p>
+            <h2>Command Pattern Example</h2>
+        </p>
+
+        <p class="explanation">In the case of this example, user can execute a different command by just clicking on the below buttons. Each command prompts an alert with different message.</p>
+    </div>
+
+    <div class="division">
+    </div>
+
+    <div class="multiple-form">
+        <div class="calculate-button-container">
+            <button class="calculate-button" ng-click="$ctrl.commands[0].execute()">Command No. 1</button>
+        </div>
+
+        <div class="calculate-button-container">
+            <button class="calculate-button" ng-click="$ctrl.commands[1].execute()">Command No. 2</button>
+        </div>
+
+        <div class="calculate-button-container">
+            <button class="calculate-button" ng-click="$ctrl.commands[2].execute()">Command No. 3</button>
+        </div>
+
+        <div class="calculate-button-container">
+            <button class="calculate-button" ng-click="$ctrl.commands[3].execute()">Command No. 4</button>
+        </div>
+    </div>
+</div>

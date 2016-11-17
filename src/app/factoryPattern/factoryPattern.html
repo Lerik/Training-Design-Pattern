@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="go-back-button">
+        <div class="myButton" ng-click="$ctrl.goBack()">Back</div>
+    </div>
+
+    <div class="header-example">
+        <p>
+            <h2>Factory Pattern Example</h2>
+        </p>
+
+        <p class="explanation">The user must select one of the brand car listed in the below dropdown list. Once user select the brand and then press the Info button, information and photo about that brand will be displayed.</p>
+    </div>
+
+    <div class="division">
+    </div>
+
+    <div class="multiple-form">
+        <p>Select a Brand</p>
+
+        <select ng-model="$ctrl.brandSelected">
+            <option ng-repeat="brand in $ctrl.brands" value="{{brand}}">{{brand}}</option>
+        </select>
+
+        <div class="calculate-button-container">
+            <button class="calculate-button" ng-click="$ctrl.getInformationFromBrandSelected()">Info</button>
+        </div>
+    </div>
+
+    <div class="air-conditioner-information">
+       <p>
+            <h4>{{$ctrl.brandTitle}}</h4>
+        </p>
+
+        <img src="{{$ctrl.brandImageUrl}}">
+
+        <p>{{$ctrl.brandInformation}}
+        </p>
+    </div>
+</div>
